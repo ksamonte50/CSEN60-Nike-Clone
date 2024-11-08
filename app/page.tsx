@@ -6,7 +6,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <h1 className="text-5xl font-bold">Home</h1>
+      <img alt="Image"/>
+      <section>
+        <h1>"I AM THE PRESSURE"</h1>
+        <p>Lebron doesn't duck pressure, he becomes it. The Lebron XXII is built to bring it.</p>
+        <button>Explore</button>
+      </section>
     </>
   );
 }
