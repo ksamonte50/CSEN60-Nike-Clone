@@ -1,19 +1,20 @@
 import Navbar from "./components/navbar";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <img alt="Image"/>
+      {/* <Image alt="Banner Image of Lebron James" src="/banner.jpg"/> */}
       <section className="text-center">
         <h1 className="text-6xl font-black">"I AM THE PRESSURE"</h1>
         <p className="mt-2">Lebron doesn't duck pressure, he becomes it. The Lebron XXII is built to bring it.</p>
-        <button className="mt-5 bg-black text-white py-2 px-4 rounded-full">Explore</button>
+        <button className="mt-5 bg-black text-white py-2 px-4 rounded-full hover:bg-gray-500">Explore</button>
       </section>
       <section className="flex justify-between">
         <h2 className="text-xl">Ball With The Best</h2>
         <div>
-          <button>Arrow Left</button>
+          <button></button>
           <button>Arrow Right</button>
         </div>
       </section>

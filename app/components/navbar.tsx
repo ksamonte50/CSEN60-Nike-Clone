@@ -89,12 +89,14 @@ export default function Navbar() {
             <li className="align-middle"><Link href="#"><JordanIcon /></Link></li>
             <li className="align-middle"><Link href="#"><ConverseIcon /></Link></li>
           </ul>
-          <ul className="flex gap-3">
-            <li className="text-xs font-medium"><Link href="#">Find a Store</Link></li>
-            {/* <div className="border-r-2 border-solid border-black m-3 h-3"></div> */}
-            <li className="text-xs font-medium"><Link href="#">Help</Link></li>
-            <li className="text-xs font-medium"><Link href="#">Join Us</Link></li>
-            <li className="text-xs font-medium"><Link href="#">Sign In</Link></li>
+          <ul className="flex pr-2">
+            <li className="text-xs font-medium mt-2.5"><Link href="#">Find a Store</Link></li>
+            <div className="border-r border-solid border-black m-3 h-3"></div>
+            <li className="text-xs font-medium mt-2.5"><Link href="#">Help</Link></li>
+            <div className="border-r border-solid border-black m-3 h-3"></div>
+            <li className="text-xs font-medium mt-2.5"><Link href="#">Join Us</Link></li>
+            <div className="border-r border-solid border-black m-3 h-3"></div>
+            <li className="text-xs font-medium mt-2.5"><Link href="#">Sign In</Link></li>
           </ul>
         </nav>
         <nav className="flex justify-between px-12 h-60 items-center">
