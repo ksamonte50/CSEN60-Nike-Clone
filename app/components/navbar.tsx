@@ -110,7 +110,7 @@ export default function Navbar() {
                 <li><Link href="#" className="font-medium pl-3">Sale</Link></li>
             </ul>
             <ul className="flex gap-3 items-center">
-                <li><input type="text" placeholder="Search" className="bg-gray-100 rounded-full pt-1.5 pb-1.5 pl-1"/></li>
+                <li><input type="text" placeholder="Search" className="bg-gray-100 rounded-full pt-1.5 pb-1.5 pl-1 hover:bg-gray-200"/></li>
                 <li><Link href="#"><Heart /></Link></li>
                 <li><Link href="#"><Bag /></Link></li>
             </ul>
