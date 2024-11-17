@@ -46,24 +46,43 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section>
-        <div>
+      <section className="grid grid-cols-2">
+        <div className="relative">
           <Image 
-            alt="Jordan 4 'Fear'"
-            width={500}
-            height={500}
-            src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/6277086f-b7f9-4e91-957c-9fdb4e822ede/AIR+JORDAN+4+RETRO.png" 
+            fill
+            alt="Vomero Roam"
+            src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_1033,c_limit/1c86b21e-e78b-49ad-bb4b-39011189469b/nike-just-do-it.jpg" 
           />
           <h2>Lebron James</h2>
           <button>Shop</button>
         </div>
         <div>
-          <img alt="Image"/>
+          <Image 
+            width={100}
+            height={100}
+            alt="Pegasus 41 PRM"
+            src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_1033,c_limit/154dbd67-d0a8-4cc4-b590-ad73f3177397/nike-just-do-it.jpg" 
+          />
           <h2>Ja Morant</h2>
           <button>Shop</button>
         </div>
         <div>
-          <img alt="Image"/>
+          <Image 
+            width={100}
+            height={100}
+            alt="Lebron XXII 'Currency'"
+            src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_1033,c_limit/11d5983d-9f48-43e9-8380-87f00e74267b/nike-just-do-it.jpg" 
+          />
+          <h2>Sabrina Ionescu</h2>
+          <button>Shop</button>
+        </div>
+        <div>
+          <Image 
+            width={100}
+            height={100}
+            alt="Women's Motiva GORE-TEX"
+            src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_1033,c_limit/65b43c6e-c2ac-461e-95d8-76ab8a4f12dd/nike-just-do-it.jpg" 
+          />
           <h2>Sabrina Ionescu</h2>
           <button>Shop</button>
         </div>

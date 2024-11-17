@@ -101,7 +101,7 @@ export default function Navbar() {
         </nav>
         <nav className="flex justify-between px-12 h-60 items-center">
             <Link href=""><NikeIcon /></Link>
-            <ul className="flex gap-3">
+            <ul className="flex gap-3 justify-center">
                 <li><Link href="#" className="font-medium pl-3">New</Link></li>
                 <li><Link href="#" className="font-medium pl-3">Men</Link></li>
                 <li><Link href="#" className="font-medium pl-3">Women</Link></li>
