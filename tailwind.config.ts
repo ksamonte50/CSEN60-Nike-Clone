@@ -12,8 +12,8 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      height: {
-        '60': '60px',
+      fontFamily: {
+        futura: ['FuturaCondensed', 'sans-serif']
       },
     },
   },

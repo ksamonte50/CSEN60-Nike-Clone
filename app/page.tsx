@@ -9,11 +9,11 @@ export default function Home() {
         width={940}
         height={660}
         alt="Banner Image of Lebron James" 
-        src="/images/banner.jpg"
+        src="/banner.jpg"
         className="w-screen h-[594px] object-cover object-[center_40%] mb-12"
       />
       <section className="text-center">
-        <h1 className="text-6xl font-black">"I AM THE PRESSURE"</h1>
+        <h1 className="text-7xl font-black font-futura">"I AM THE PRESSURE"</h1>
         <p className="mt-2">Lebron doesn't duck pressure, he becomes it. The Lebron XXII is built to bring it.</p>
         <button className="mt-5 bg-black text-white py-1.5 px-4 rounded-full hover:bg-gray-500">Explore</button>
       </section>
@@ -68,9 +68,9 @@ export default function Home() {
         </div>
       </section>
       <section className="text-center m-12">
-        <h1 className="text-5xl font-black">LATEST DROPS</h1>
+        <h1 className="text-5xl font-black font-futura">LATEST DROPS</h1>
         <p className="mt-2">Featuring the Air Jordan 4 and more.</p>
-        <button className="mt-5 bg-black text-white py-1.5 px-4 rounded-full hover:bg-gray-500">Shop</button>
+        <button className="mt-5 bg-black text-white py-1.5 px-4 rounded-full hover:bg-gray-500">Shop New Arrivals</button>
       </section>
       <div className="relative w-full h-[594px]">
         <Image

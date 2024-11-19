@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Futura';
+    font-family: 'FuturaCondensed';
     src: url('/fonts/Futura Condensed Extra Bold.otf') format('opentype');
     font-weight: 500; /* Define the weight */
     font-style: normal; /* Define the style */
