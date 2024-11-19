@@ -5,7 +5,13 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      {/* <Image alt="Banner Image of Lebron James" src="/banner.jpg"/> */}
+      <Image 
+        width={940}
+        height={660}
+        alt="Banner Image of Lebron James" 
+        src="/images/banner.jpg"
+        className="w-screen h-[594px] object-cover object-[center_40%] mb-12"
+      />
       <section className="text-center">
         <h1 className="text-6xl font-black">"I AM THE PRESSURE"</h1>
         <p className="mt-2">Lebron doesn't duck pressure, he becomes it. The Lebron XXII is built to bring it.</p>

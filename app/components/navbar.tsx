@@ -99,7 +99,7 @@ export default function Navbar() {
             <li className="text-xs font-medium mt-2.5"><Link href="#">Sign In</Link></li>
           </ul>
         </nav>
-        <nav className="flex justify-between px-12 h-60 items-center">
+        <nav className="flex justify-between px-12 h-[60px] items-center">
             <Link href=""><NikeIcon /></Link>
             <ul className="flex gap-3 justify-center">
                 <li><Link href="#" className="font-medium pl-3">New</Link></li>
