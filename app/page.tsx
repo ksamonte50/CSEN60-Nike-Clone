@@ -1,4 +1,5 @@
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 import Image from "next/image";
 
 export default function Home() {
@@ -72,7 +73,7 @@ export default function Home() {
         <p className="mt-2">Featuring the Air Jordan 4 and more.</p>
         <button className="mt-5 bg-black text-white py-1.5 px-4 rounded-full hover:bg-gray-500">Shop New Arrivals</button>
       </section>
-      <div className="relative w-full h-[594px]">
+      <div className="relative w-full h-[594px] mb-[84px]">
         <Image
           alt="Jordan 4 'Fear'"
           src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_2065,c_limit/2c0e0ce5-bc6c-47fd-b48a-6541e54dbd3d/nike-just-do-it.jpg"
@@ -81,12 +82,7 @@ export default function Home() {
           priority={true}
         />
       </div>
-      <section>
-        <h1>Featured Products</h1>
-        <p>Featuring Jalen Brunson in the new Nike C1TY</p>
-        <button>Explore</button>
-      </section>
-      <img alt="Image"/>
+      <Footer />
     </>
   );
 }
