@@ -121,12 +121,24 @@ export default function Footer() {
                 <h4 className="text-gray-500 text-sm font-medium mt-0.5">United States</h4>
             </div>
         </nav>
-        <ul>
-            <li><Link href="#">© 2024 Nike, Inc. All Rights Reserved</Link></li>
-            <li><Link href="#">© 2024 Nike, Inc. All Rights Reserved</Link></li>
-            <li><Link href="#">© 2024 Nike, Inc. All Rights Reserved</Link></li>
-            <li><Link href="#">© 2024 Nike, Inc. All Rights Reserved</Link></li>
-
+        <ul className="flex gap-6 mt-3 ml-12 mb-24">
+            <li><Link href="#" className="text-gray-500 text-sm font-medium">© 2024 Nike, Inc. All Rights Reserved</Link></li>
+            <li><Link href="#" className="text-gray-500 text-sm font-medium">Guides</Link></li>
+            <li><Link href="#" className="text-gray-500 text-sm font-medium">Terms of Sale</Link></li>
+            <li><Link href="#" className="text-gray-500 text-sm font-medium">Terms of Use</Link></li>
+            <li><Link href="#" className="text-gray-500 text-sm font-medium">Nike Privacy Policy</Link></li>
+            <div className="flex items-center">
+                <Image 
+                    width={24}
+                    height={22}
+                    alt="Your Privacy Choices Switch" 
+                    aria-hidden="true" 
+                    src="https://static.nike.com/a/images/w_960,c_limit/3732c58b-d0ad-4c3c-898c-c4b90193312b/image.png" 
+                    className="pr-1 h-[22px] w-7"
+                />
+                <li><Link href="#" className="text-gray-500 text-sm font-medium">Your Privacy Choices</Link></li>
+            </div>
+            <li><Link href="#" className="text-gray-500 text-sm font-medium">CA Supply Chains Act</Link></li>
         </ul>
     </>
   );
