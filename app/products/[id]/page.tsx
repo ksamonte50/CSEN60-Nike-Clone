@@ -1,3 +1,4 @@
+import Heart from "../../components/navbar";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import Image from "next/image";
@@ -7,10 +8,11 @@ export default function Product() {
   const product = {
     "id": "vomero-roam",
     "name": "Nike Zoom Vomero Roam",
-    "description": "Women's Winterized Shoes",
+    "subtitle": "Women's Winterized Shoes",
     "price": 120,
-    "images": ["/vomero1.jpeg"],
+    "images": ["/images/vomero1.jpeg"],
     "sizes": ["W 5 / M 3.5", "W 5.5 / M 4", "W 6 / M 4.5", "W 6.5 / M 5", "W 7 / M 5.5",],
+    "description": "Designed for city conditions, this winterized version of the Vomero is made for wet weather. Durable materials and a rubber mudguard work together to help safeguard your shoes from dirt and puddles. Plus, a chunky midsole gives you a visible boost of comfort and style wherever you wander.",
     "category": "Men's Shoes"
   };
 
@@ -39,7 +41,7 @@ export default function Product() {
             </div>
             <div className="w-[376px]">
               <h1 className="text-xl font-medium">{product.name}</h1>
-              <p className="text-gray-500 mb-2">{product.description}</p>
+              <p className="text-gray-500 mb-2">{product.subtitle}</p>
               <p className="font-medium mb-8">${product.price}</p>
               <div className="flex justify-between">
                 <p className="font-medium">Select Size</p>
@@ -68,18 +70,41 @@ export default function Product() {
                   </button>
                 ))}
               </div>
-              <p>4 interest-free payments of $45.00 with 
-                <Image 
-                  src="/klarna.png" 
+              <p className="text-center">4 interest-free payments of $45.00 with</p>
+              <p className="flex justify-center items-center">
+                <Image
+                  src="/images/klarna.png"
                   alt="Klarna Logo"
-                  width={765}
-                  height={372}
-                />. 
-                <a href="#">Learn More</a>
+                  width={522}
+                  height={131}
+                  className="w-auto h-3.5"
+                />.
+                <a href="#" className="pt-[1px] pl-1 underline">Learn More</a>
               </p>
-              <button className="bg-black text-white px-6 py-3 rounded-md mt-6">
+              <button className="font-medium bg-black text-white rounded-full w-full h-[60px] mt-[41px] mb-3">
                 Add to Bag
               </button>
+              <button className="font-medium border border-gray-400 text-black rounded-full w-full h-[60px] mb-8">
+                Favorite
+              </button>
+              <div>
+                <h3>Shipping</h3>
+                <p>You'll see our shipping options at checkout.</p>
+                <h3>Free Pickup</h3>
+                <a href="#">Find a Store</a>
+              </div>
+              <p>{product.description}</p>
+              <ul>
+                <li><p>Shown: Flax/Anthracite/University Gold/Khaki</p></li>
+                <li><p>Style: HQ2181-200</p></li>
+              </ul>
+              <a href="#">View Product Details</a>
+              <div>
+                <h2>Shipping & Returns</h2>
+              </div>
+              <div>
+                <h2>Reviews</h2>
+              </div>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ export default function Home() {
         width={940}
         height={660}
         alt="Banner Image of Lebron James" 
-        src="/banner.jpg"
+        src="/images/banner.jpg"
         className="w-screen h-[594px] object-cover object-[center_40%] mb-12"
       />
       <section className="text-center">
