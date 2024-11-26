@@ -58,18 +58,19 @@ export default function Product() {
                   <a className="text-sm" href="#">Size Guide</a>
                 </div>
               </div>
-              <div className="flex flex-wrap mt-2">
+              <div className="grid grid-cols-2 mt-3 mb-8gap-[7px] w-full">
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className="border border-gray-300 rounded-md px-4 py-2 hover:bg-gray-200"
+                    className="border border-gray-200 h-[48px] rounded-md hover:border-black"
                   >
                     {size}
                   </button>
                 ))}
               </div>
+              <p>4 interest4 interest-free payments of $45.00 with Klarna. <a href="#">Learn More</a></p>
               <button className="bg-black text-white px-6 py-3 rounded-md mt-6">
-                Add to Cart
+                Add to Bag
               </button>
             </div>
           </div>
