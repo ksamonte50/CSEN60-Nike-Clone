@@ -68,7 +68,7 @@ export default function Product() {
                   </button>
                 ))}
               </div>
-              <p>4 interest4 interest-free payments of $45.00 with Klarna. <a href="#">Learn More</a></p>
+              <p>4 interest-free payments of $45.00 with Klarna. <a href="#">Learn More</a></p>
               <button className="bg-black text-white px-6 py-3 rounded-md mt-6">
                 Add to Bag
               </button>
