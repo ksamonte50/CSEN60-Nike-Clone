@@ -26,7 +26,7 @@ export default function Product() {
       <nav className="h-[60px] bg-gray-100"></nav>
       <main className="mt-12 flex">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex justify-center gap-x-8">
             <div>
               {product.images.map((image, index) => (
                 <Image
