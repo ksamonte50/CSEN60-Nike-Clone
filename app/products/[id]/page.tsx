@@ -24,7 +24,7 @@ export default function Product() {
     <>
       <Navbar />
       <nav className="h-[60px] bg-gray-100"></nav>
-      <main className="mt-12">
+      <main className="mt-12 flex">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -87,23 +87,23 @@ export default function Product() {
               <button className="font-medium border border-gray-400 text-black rounded-full w-full h-[60px] mb-8">
                 Favorite
               </button>
-              <div>
-                <h3>Shipping</h3>
-                <p>You'll see our shipping options at checkout.</p>
-                <h3>Free Pickup</h3>
-                <a href="#">Find a Store</a>
+              <div className="mb-[52px]">
+                <h3 className="font-medium">Shipping</h3>
+                <p className="mb-6">You'll see our shipping options at checkout.</p>
+                <h3 className="font-medium">Free Pickup</h3>
+                <a href="#" className="font-medium border-b border-black pb-1">Find a Store</a>
               </div>
               <p>{product.description}</p>
-              <ul>
-                <li><p>Shown: Flax/Anthracite/University Gold/Khaki</p></li>
-                <li><p>Style: HQ2181-200</p></li>
+              <ul className="list-disc list-inside py-7">
+                <li className="pb-1 w-[80%]">Shown: Flax/Anthracite/University Gold/Khaki</li>
+                <li className="pb-1">Style: HQ2181-200</li>
               </ul>
-              <a href="#">View Product Details</a>
-              <div>
+              <a href="#" className="font-medium border-b-2 border-black pb-1">View Product Details</a>
+              <div className="py-[30px] text-xl border-b border-gray-200">
                 <h2>Shipping & Returns</h2>
               </div>
               <div>
-                <h2>Reviews</h2>
+                <h2 className="py-[30px] text-xl border-b border-gray-200 mb-12">Reviews</h2>
               </div>
             </div>
           </div>
