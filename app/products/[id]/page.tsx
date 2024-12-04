@@ -33,8 +33,8 @@ export default async function Product({ params }: { params: { id: string } }) {
   const product = await fetchProduct(id);
   console.log('Product data:', product);
 
-  if (!product) {
-    return <div className="text-center mt-20">Product not found</div>;
+  if (!product || !product.images) {
+    return <div className="text-center mt-20">Product not found or missing images</div>;
   }
 
   return (
@@ -45,7 +45,7 @@ export default async function Product({ params }: { params: { id: string } }) {
         <div className="container mx-auto px-4">
           <div className="flex justify-center gap-x-8">
             <div>
-              {product.images.map((image, index) => (
+              {product?.images?.map((image, index) => (
                 <Image
                   key={index}
                   src={image}

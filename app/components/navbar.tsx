@@ -103,7 +103,7 @@ export default function Navbar() {
           </ul>
         </nav>
         <nav className="flex justify-between px-12 h-[60px] items-center">
-            <Link href="#"><NikeIcon /></Link>
+            <Link href="/"><NikeIcon /></Link>
             <ul className="flex gap-3 justify-center">
                 <li><Link href="#" className="font-medium pl-3">New</Link></li>
                 <li><Link href="#" className="font-medium pl-3">Men</Link></li>
@@ -118,7 +118,7 @@ export default function Navbar() {
                 </button></li>
                 <li><input type="text" placeholder="Search" className="bg-gray-100 text-gray-950 rounded-full py-1.5 pl-9 hover:bg-gray-200 w-[168px]"/></li>
                 <li><Link href="#"><Heart /></Link></li>
-                <li><Link href=""><Bag /></Link></li>
+                <li><Link href="/cart"><Bag /></Link></li>
             </ul>
         </nav>
     </>
