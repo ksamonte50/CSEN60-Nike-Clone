@@ -1,4 +1,6 @@
 import Link from "next/link";
+import React from "react";
+
 
 export function JordanIcon() {
   return (
@@ -63,6 +65,7 @@ export function Heart() {
       </svg>
   )
 }
+
 
 export function Bag() {
   return (
