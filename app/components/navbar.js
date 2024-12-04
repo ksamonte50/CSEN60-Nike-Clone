@@ -41,5 +41,5 @@ function Navbar() {
                 React.createElement("li", null,
                     React.createElement(link_1.default, { href: "#" }, "Favorites")),
                 React.createElement("li", null,
-                    React.createElement(link_1.default, { href: "#" }, "Cart"))))));
+                    React.createElement(link_1.default, { href: "app/cart/page.tsx" }, "Cart"))))));
 }
