@@ -3,21 +3,34 @@ import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import Image from "next/image";
 
-export default function Product() {
-  // const product = await fetchProduct(params.id);
-  const product = {
-    "id": "vomero-roam",
-    "name": "Nike Zoom Vomero Roam",
-    "subtitle": "Women's Winterized Shoes",
-    "price": 120,
-    "images": ["/images/vomero1.jpeg"],
-    "sizes": ["W 5 / M 3.5", "W 5.5 / M 4", "W 6 / M 4.5", "W 6.5 / M 5", "W 7 / M 5.5",],
-    "description": "Designed for city conditions, this winterized version of the Vomero is made for wet weather. Durable materials and a rubber mudguard work together to help safeguard your shoes from dirt and puddles. Plus, a chunky midsole gives you a visible boost of comfort and style wherever you wander.",
-  };
+type Product = {
+  id: number;
+  name: string;
+  subtitle: string;
+  price: number;
+  images: string[];
+  sizes: string[];
+  description: string;
+};
 
-  // if (!product) {
-  //   return <div className="text-center mt-20">Product not found</div>;
-  // }
+async function fetchProduct(id: string): Promise<Product | null> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/${id}`);
+  if (!res.ok) {
+    console.error(`Failed to fetch product: ${res.status} - ${res.statusText}`);
+    return null;
+  }
+  return res.json();
+}
+
+// console.log(`Fetching from URL: ${process.env.NEXT_PUBLIC_URL}/api/products/${id}`);
+
+
+export default async function Product({ params }: { params: { id: string } }) {  
+  const product = await fetchProduct(params.id);
+
+  if (!product) {
+    return <div className="text-center mt-20">Product not found</div>;
+  }
 
   return (
     <>
