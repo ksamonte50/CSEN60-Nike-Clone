@@ -108,16 +108,16 @@ export default function Cart(){
                     <div>
                         <section className ="flex flex-row " >
                             <Image className = "basis 1/2"
-                                src="/images/shoe.jpeg"
+                                src="/images/vomero1.jpeg"
                                 alt="Jordan Stadium 90"
                                 width={150}
                                 height={150}
                             />
                             <ul className = "pl-3 pr-20 basis 1/4">
-                                <li className = "font-medium pb-0.5">Jordan Stadium 90</li>
-                                <li className = "text-gray-500 pb-.5">Men's Shoes</li>
-                                <li className = "text-gray-500 pb-.5">Flax/Black/Sanddrift/Baroque Brown</li>
-                                <li className = "text-gray-500 flex flex-row pb-.5">Size <p className ="underline ml-4">14</p></li>
+                                <li className = "font-medium pb-0.5">Nike Zoom Vomero Roam</li>
+                                <li className = "text-gray-500 pb-.5">Women's Winterized Shoes</li>
+                                <li className = "text-gray-500 pb-.5">Flax/Anthracite/University Gold/Khaki </li>
+                                <li className = "text-gray-500 flex flex-row pb-.5">Size <p className ="underline ml-4">7</p></li>
                             </ul>
                             <ul className = "basis 1/4 ml-auto">
                                 <li className = "font-medium">$120.00</li>
@@ -190,7 +190,7 @@ export default function Cart(){
                     <ul >
                         <li className ="font-medium pb-2"> Do you have a Promo Code </li>
 
-                        {/* <li className="font-light pb-2">
+                        <li className="font-light pb-2">
                             {isOpen && (
                                 <div className="mt-2">
                                     <input
@@ -208,21 +208,21 @@ export default function Cart(){
                                     </button>
                                 </div>
                             )}
-                        </li> */}
+                        </li>
 
 
                         <li className ="font-light pb-2">Subtotal <button> <QuestionMark /> </button></li>
                         <li className ="font-light pb-2">Estimated Shipping and Handling</li>
                         <li className ="font-light pb-2">Estimated Tax <button> <QuestionMark /></button></li>
                     </ul>
-                    <ul className={`flex flex-col items-end ${isOpen ? 'mt-8' : ''}`}>
+                    <ul className="flex flex-col items-end">
                         <li className="font-light pb-1">
                             <button onClick={() => setIsOpen(!isOpen)}>
                                 <DropDown />
                             </button></li>
-                        <li className ="font-light pb-2">${total.toFixed(2)}</li>
-                        <li className ="font-light pb-2">Free</li>
-                        <li className ="font-light text-xl">-</li>
+                        <li className={`font-light pb-2 ${isOpen ? 'mt-8' : ''}`}>${total.toFixed(2)}</li>
+                        <li className={`font-light pb-2 ${isOpen ? 'mt-8' : ''}`}>Free</li>
+                        <li className ={`font-light text-xl ${isOpen ? 'mt-8' : ''}`}>-</li>
                     </ul>
                 </div>
 
