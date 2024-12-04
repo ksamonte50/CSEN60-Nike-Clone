@@ -3,7 +3,6 @@
 
 import Link from  "next/link";
 import React, {useState} from "react";
-import { incrementCounter, decrementCounter } from "../cart/cart";
 
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -191,7 +190,7 @@ export default function Cart(){
                     <ul >
                         <li className ="font-medium pb-2"> Do you have a Promo Code </li>
 
-                        <li className="font-light pb-2">
+                        {/* <li className="font-light pb-2">
                             {isOpen && (
                                 <div className="mt-2">
                                     <input
@@ -209,7 +208,7 @@ export default function Cart(){
                                     </button>
                                 </div>
                             )}
-                        </li>
+                        </li> */}
 
 
                         <li className ="font-light pb-2">Subtotal <button> <QuestionMark /> </button></li>
