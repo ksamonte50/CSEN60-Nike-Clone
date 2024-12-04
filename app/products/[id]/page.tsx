@@ -13,7 +13,6 @@ export default function Product() {
     "images": ["/images/vomero1.jpeg"],
     "sizes": ["W 5 / M 3.5", "W 5.5 / M 4", "W 6 / M 4.5", "W 6.5 / M 5", "W 7 / M 5.5",],
     "description": "Designed for city conditions, this winterized version of the Vomero is made for wet weather. Durable materials and a rubber mudguard work together to help safeguard your shoes from dirt and puddles. Plus, a chunky midsole gives you a visible boost of comfort and style wherever you wander.",
-    "category": "Men's Shoes"
   };
 
   // if (!product) {
