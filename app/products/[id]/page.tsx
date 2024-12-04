@@ -4,7 +4,7 @@ import Footer from "../../components/footer";
 import Image from "next/image";
 
 type Product = {
-  id: number;
+  id: string;
   name: string;
   subtitle: string;
   price: number;
@@ -14,7 +14,7 @@ type Product = {
 };
 
 async function fetchProduct(id: string): Promise<Product | null> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/${id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`);
   if (!res.ok) {
     console.error(`Failed to fetch product: ${res.status} - ${res.statusText}`);
     return null;
@@ -22,11 +22,9 @@ async function fetchProduct(id: string): Promise<Product | null> {
   return res.json();
 }
 
-// console.log(`Fetching from URL: ${process.env.NEXT_PUBLIC_URL}/api/products/${id}`);
-
-
 export default async function Product({ params }: { params: { id: string } }) {  
-  const product = await fetchProduct(params.id);
+  const { id } = await params;
+  const product = await fetchProduct(id);
 
   if (!product) {
     return <div className="text-center mt-20">Product not found</div>;
