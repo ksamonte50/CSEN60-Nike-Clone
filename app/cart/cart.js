@@ -1,4 +1,4 @@
-// counter.js
+// cart.js
 let counter = 1;
 
 export function incrementCounter() {

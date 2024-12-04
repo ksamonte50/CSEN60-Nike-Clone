@@ -70,11 +70,24 @@ export default function Cart(){
     const [counter, setCounter] = useState<number>(1); // Manage counter state
     const itemPrice = 120.00;
     const total = itemPrice * counter;
+    const [showPromoInput, setShowPromoInput] = useState(false); // Add state to toggle dropdown content
+    const [promoCode, setPromoCode] = useState(""); // Add state for promo code input
+    const [isOpen, setIsOpen] = useState(false);
     // Increment counter
-    const incrementCounter = () => setCounter(counter + 1);
-  
+    const incrementCounter = () => setCounter(counter + 1); 
     // Decrement counter
     const decrementCounter = () => setCounter(counter > 1 ? counter - 1 : 0);
+
+      // Toggle dropdown visibility
+    const togglePromoInput = () => {
+        setShowPromoInput(!showPromoInput);
+    };
+
+  // Apply promo code (logic placeholder)
+    const applyPromoCode = () => {
+        alert(`Promo Code Applied: ${promoCode}`);
+    };
+
 
     return(
         <>
@@ -170,23 +183,50 @@ export default function Cart(){
                     </div>
              )}
             </main>
+            {/* Section containg totals and Summary */}
             <aside className =" w-full max-w-80" >
                 <h1 className ="font-normal text-2xl mb-4" >Summary</h1>
 
                 <div className=" flex-row-container flex flex-row justify-between items-start pb-2" >
                     <ul >
                         <li className ="font-medium pb-2"> Do you have a Promo Code </li>
+
+                        <li className="font-light pb-2">
+                            {isOpen && (
+                                <div className="mt-2">
+                                    <input
+                                        type="text"
+                                        placeholder="Enter Promo Code"
+                                        className="border rounded-md px-4 py-2 w-full mb-2"
+                                        value={promoCode}
+                                        onChange={(e) => setPromoCode(e.target.value)}
+                                    />
+                                    <button
+                                        className="bg-blue-500 text-white px-4 py-2 rounded-md w-full"
+                                        onClick={applyPromoCode}
+                                    >
+                                        Apply
+                                    </button>
+                                </div>
+                            )}
+                        </li>
+
+
                         <li className ="font-light pb-2">Subtotal <button> <QuestionMark /> </button></li>
                         <li className ="font-light pb-2">Estimated Shipping and Handling</li>
                         <li className ="font-light pb-2">Estimated Tax <button> <QuestionMark /></button></li>
                     </ul>
-                    <ul className ="flex flex-col items-end">
-                        <li className="font-light pb-1"><button> <DropDown /> </button></li>
+                    <ul className={`flex flex-col items-end ${isOpen ? 'mt-8' : ''}`}>
+                        <li className="font-light pb-1">
+                            <button onClick={() => setIsOpen(!isOpen)}>
+                                <DropDown />
+                            </button></li>
                         <li className ="font-light pb-2">${total.toFixed(2)}</li>
                         <li className ="font-light pb-2">Free</li>
                         <li className ="font-light text-xl">-</li>
                     </ul>
                 </div>
+
 
                 <div className ="Standard-Container border-t border-b border-gray-300 py-4" >
                     <ul className="flex flex-row  justify-between">
