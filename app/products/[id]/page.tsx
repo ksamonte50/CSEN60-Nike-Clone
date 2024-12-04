@@ -13,17 +13,25 @@ type Product = {
 };
 
 async function fetchProduct(id: string): Promise<Product | null> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`);
-  if (!res.ok) {
-    console.error(`Failed to fetch product: ${res.status} - ${res.statusText}`);
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`);
+    if (!res.ok) {
+      console.error(`Failed to fetch product: ${res.status} - ${res.statusText}`);
+      return null;
+    }
+    const product = await res.json();
+    console.log('Fetched product:', product); // Debug the fetched data
+    return product;
+  } catch (error) {
+    console.error('Fetch error:', error);
     return null;
   }
-  return res.json();
 }
 
 export default async function Product({ params }: { params: { id: string } }) {  
   const { id } = await params;
   const product = await fetchProduct(id);
+  console.log('Product data:', product);
 
   if (!product) {
     return <div className="text-center mt-20">Product not found</div>;
@@ -42,8 +50,8 @@ export default async function Product({ params }: { params: { id: string } }) {
                   key={index}
                   src={image}
                   alt={product.name}
-                  width={500}
-                  height={500}
+                  width={1728}
+                  height={2160}
                   className="rounded-md"
                 />
               ))}
