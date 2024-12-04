@@ -29,7 +29,7 @@ export default function Home() {
           <div className="absolute bottom-12 left-12 text-white">
             <p className="mb-2">For Rain or Shine</p>
             <h2 className="text-white text-2xl">Vomero Roam</h2>
-            <button className="mt-5 bg-white text-black font-medium py-1.5 px-4 rounded-full hover:bg-gray-300"><Link href="/products/vomero-roam"></Link></button>
+            <button className="mt-5 bg-white text-black font-medium py-1.5 px-4 rounded-full hover:bg-gray-300"><Link href="/products/vomero-roam">Shop</Link></button>
           </div>
         </div>
         <div className="relative h-[594px]">
