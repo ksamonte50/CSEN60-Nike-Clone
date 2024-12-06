@@ -1,6 +1,7 @@
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import Image from "next/image";
+import { useCart } from '../../context/cartContext';
 
 type Product = {
   id: string;
@@ -30,7 +31,9 @@ async function fetchProduct(id: string): Promise<Product | null> {
 
 export default async function Product({ params }: { params: { id: string } }) {  
   const { id } = await params;
+  const { addToCart } = useCart();
   const product = await fetchProduct(id);
+
   console.log('Product data:', product);
 
   if (!product || !product.images) {
@@ -98,7 +101,8 @@ export default async function Product({ params }: { params: { id: string } }) {
                 />.
                 <a href="#" className="pt-[1px] pl-1 underline">Learn More</a>
               </p>
-              <button className="font-medium bg-black text-white rounded-full w-full h-[60px] mt-[41px] mb-3">
+              <button onClick = {addToCart}
+               className="font-medium bg-black text-white rounded-full w-full h-[60px] mt-[41px] mb-3">
                 Add to Bag
               </button>
               <button className="font-medium border border-gray-400 text-black rounded-full w-full h-[60px] mb-8">

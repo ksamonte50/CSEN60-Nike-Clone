@@ -1,5 +1,7 @@
+"use Client";
 import Link from "next/link";
 import React from "react";
+import { useCart } from '../context/cartContext';
 
 
 export function JordanIcon() {
@@ -85,6 +87,10 @@ export function Bag() {
 }
 
 export default function Navbar() {
+  const { cartCount } = useCart(); // Assuming `cartItems` is an array of items in the cart
+  // const cartCount = cartItems?.length || 0; // Calculate the number of items
+
+
   return (
     <>
       <nav className="flex justify-between bg-gray-100 px-12 h-9 items-center">
@@ -118,7 +124,16 @@ export default function Navbar() {
               </button></li>
               <li><input type="text" placeholder="Search" className="bg-gray-100 text-gray-950 rounded-full py-1.5 pl-9 hover:bg-gray-200 w-[168px]"/></li>
               <li><Link href="#"><Heart /></Link></li>
-              <li><Link href="/cart"><Bag /></Link></li>
+              <li className="relative">
+            <Link href="/cart">
+              <Bag />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+          </li>
           </ul>
       </nav>
     </>
