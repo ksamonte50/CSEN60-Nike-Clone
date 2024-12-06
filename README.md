@@ -14,4 +14,3 @@
 - Functionality (can optional assignment to specific teammates)
   - Adding to cart
   - Product Image Carousel
-  - Nav bar drop down menus
