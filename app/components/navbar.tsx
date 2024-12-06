@@ -84,40 +84,40 @@ export function Bag() {
 export default function Navbar() {
   return (
     <>
-        <nav className="flex justify-between bg-gray-100 px-12 h-9 items-center">
-          <ul className="flex gap-7">
-            <li className="align-middle pt-[2px]"><Link href="#"><JordanIcon /></Link></li>
-            <li className="align-middle"><Link href="#"><ConverseIcon /></Link></li>
+      <nav className="flex justify-between bg-gray-100 px-12 h-9 items-center">
+        <ul className="flex gap-7">
+          <li className="align-middle pt-[2px]"><Link href="#"><JordanIcon /></Link></li>
+          <li className="align-middle"><Link href="#"><ConverseIcon /></Link></li>
+        </ul>
+        <ul className="flex pr-2">
+          <li className="text-xs font-medium mt-2.5"><Link href="#">Find a Store</Link></li>
+          <div className="border-r border-solid border-black m-3 h-3"></div>
+          <li className="text-xs font-medium mt-2.5"><Link href="#">Help</Link></li>
+          <div className="border-r border-solid border-black m-3 h-3"></div>
+          <li className="text-xs font-medium mt-2.5"><Link href="#">Join Us</Link></li>
+          <div className="border-r border-solid border-black m-3 h-3"></div>
+          <li className="text-xs font-medium mt-2.5"><Link href="#">Sign In</Link></li>
+        </ul>
+      </nav>
+      <nav className="flex justify-between px-12 h-[60px] items-center">
+          <Link href="/"><NikeIcon /></Link>
+          <ul className="flex gap-3 justify-center absolute inset-[53px]">
+          <li><Link href="#" className="font-medium pl-3">New</Link></li>
+          <li><Link href="#" className="font-medium pl-3">Men</Link></li>
+          <li><Link href="#" className="font-medium pl-3">Women</Link></li>
+          <li><Link href="#" className="font-medium pl-3">Kids</Link></li>
+          <li><Link href="#" className="font-medium pl-3">Jordan</Link></li>
+          <li><Link href="#" className="font-medium pl-3">Sale</Link></li>
+      </ul>
+          <ul className="flex gap-3 items-center relative">
+              <li><button className="absolute top-1.5 left-2 rounded-full p-1.5 bg-gray-100 hover:bg-gray-200">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" strokeWidth="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853"></path></svg>
+              </button></li>
+              <li><input type="text" placeholder="Search" className="bg-gray-100 text-gray-950 rounded-full py-1.5 pl-9 hover:bg-gray-200 w-[168px]"/></li>
+              <li><Link href="#"><Heart /></Link></li>
+              <li><Link href="/cart"><Bag /></Link></li>
           </ul>
-          <ul className="flex pr-2">
-            <li className="text-xs font-medium mt-2.5"><Link href="#">Find a Store</Link></li>
-            <div className="border-r border-solid border-black m-3 h-3"></div>
-            <li className="text-xs font-medium mt-2.5"><Link href="#">Help</Link></li>
-            <div className="border-r border-solid border-black m-3 h-3"></div>
-            <li className="text-xs font-medium mt-2.5"><Link href="#">Join Us</Link></li>
-            <div className="border-r border-solid border-black m-3 h-3"></div>
-            <li className="text-xs font-medium mt-2.5"><Link href="#">Sign In</Link></li>
-          </ul>
-        </nav>
-        <nav className="flex justify-between px-12 h-[60px] items-center">
-            <Link href="/"><NikeIcon /></Link>
-            <ul className="flex gap-3 justify-center">
-                <li><Link href="#" className="font-medium pl-3">New</Link></li>
-                <li><Link href="#" className="font-medium pl-3">Men</Link></li>
-                <li><Link href="#" className="font-medium pl-3">Women</Link></li>
-                <li><Link href="#" className="font-medium pl-3">Kids</Link></li>
-                <li><Link href="#" className="font-medium pl-3">Jordan</Link></li>
-                <li><Link href="#" className="font-medium pl-3">Sale</Link></li>
-            </ul>
-            <ul className="flex gap-3 items-center relative">
-                <li><button className="absolute top-1.5 left-2 rounded-full p-1.5 bg-gray-100 hover:bg-gray-200">
-                  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" strokeWidth="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853"></path></svg>
-                </button></li>
-                <li><input type="text" placeholder="Search" className="bg-gray-100 text-gray-950 rounded-full py-1.5 pl-9 hover:bg-gray-200 w-[168px]"/></li>
-                <li><Link href="#"><Heart /></Link></li>
-                <li><Link href="/cart"><Bag /></Link></li>
-            </ul>
-        </nav>
+      </nav>
     </>
   );
 }
