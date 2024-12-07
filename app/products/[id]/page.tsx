@@ -20,7 +20,6 @@ async function fetchProduct(id: string): Promise<Product | null> {
       return null;
     }
     const product = await res.json();
-    console.log('Fetched product:', product); // Debug the fetched data
     return product;
   } catch (error) {
     console.error('Fetch error:', error);
@@ -31,11 +30,17 @@ async function fetchProduct(id: string): Promise<Product | null> {
 export default async function Product({ params }: { params: { id: string } }) {  
   const { id } = await params;
   const product = await fetchProduct(id);
-  console.log('Product data:', product);
 
-  if (!product || !product.images) {
-    return <div className="text-center mt-20">Product not found or missing images</div>;
+  console.log('Fetched product:', product[0]);
+
+
+  if (!product) {
+    return <div className="text-center mt-20">Product not found</div>;
+  } else if(!product[0].images) {
+    return <div className="text-center mt-20">Product missing images</div>;
   }
+
+  // console.log(product[0].images);
 
   return (
     <>
@@ -45,21 +50,21 @@ export default async function Product({ params }: { params: { id: string } }) {
         <div className="container mx-auto px-4">
           <div className="flex justify-center gap-x-8">
             <div>
-              {product?.images?.map((image, index) => (
+              {product[0].images.map((image, index) => (
                 <Image
                   key={index}
                   src={image}
                   alt={product.name}
                   width={1728}
                   height={2160}
-                  className="rounded-md"
+                  className="rounded-md w-[535px] h-[669px]"
                 />
               ))}
             </div>
             <div className="w-[376px]">
-              <h1 className="text-xl font-medium">{product.name}</h1>
-              <p className="text-gray-500 mb-2">{product.subtitle}</p>
-              <p className="font-medium mb-8">${product.price}</p>
+              <h1 className="text-xl font-medium">{product[0].name}</h1>
+              <p className="text-gray-500 mb-2">{product[0].subtitle}</p>
+              <p className="font-medium mb-8">${product[0].price}</p>
               <div className="flex justify-between">
                 <p className="font-medium">Select Size</p>
                 <div className="font-medium flex gap-x-1 items-center">
@@ -78,7 +83,7 @@ export default async function Product({ params }: { params: { id: string } }) {
                 </div>
               </div>
               <div className="grid grid-cols-2 mt-3 mb-8 gap-[7px] w-full">
-                {product.sizes.map((size) => (
+                {product[0].sizes.map((size) => (
                   <button
                     key={size}
                     className="border border-gray-200 h-[48px] rounded hover:border-black"

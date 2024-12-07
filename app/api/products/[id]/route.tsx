@@ -12,11 +12,4 @@ export async function GET (request: NextRequest, context: { params: { id: string
     console.log('Product data:', product);
 
     return NextResponse.json(product);
-
-    // Fetch all products
-//     const products = await query('SELECT * FROM products');
-//     return NextResponse.json(products);
-//   } catch (error) {
-//     return NextResponse.json({ error: 'Database error' }, { status: 500 });
-//   }
 }
